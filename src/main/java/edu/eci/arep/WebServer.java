@@ -74,7 +74,7 @@ public class WebServer {
 
     private static String roundRobin() {
         Random random = new Random();
-        String newUrl = String.format(WebServer.GET_URL, 1/*(random.nextInt(3)+1)*/);
+        String newUrl = String.format(WebServer.GET_URL, (random.nextInt(3)+1));
         System.out.println("Making request to: "+newUrl);
         return newUrl;
     }
