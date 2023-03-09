@@ -39,7 +39,7 @@ public class LogService {
     }
 
     public static List<Document> getLogs() {
-        mongo = new MongoClient("192.168.5.111", 27017);
+        mongo = new MongoClient("172.31.54.93", 27017);
         MongoDatabase db = mongo.getDatabase("admin");
         MongoCollection<Document> collection = db.getCollection("Logs");
 
@@ -56,7 +56,7 @@ public class LogService {
     }
 
     public static void insertLog(String body) {
-        mongo = new MongoClient( "192.168.5.111" , 27017);
+        mongo = new MongoClient( "172.31.54.93" , 27017);
         MongoDatabase db = mongo.getDatabase("admin");
 
         MongoCollection<Document> collection = db.getCollection("Logs");

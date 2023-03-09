@@ -13,7 +13,7 @@ import static spark.Spark.*;
 public class WebServer {
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String GET_URL = "http://192.168.5.111:3500%S";
+    private static final String GET_URL = "http://172.31.54.93:3500%S";
 
 
     public static void main(String... args){
