@@ -18,9 +18,9 @@ function sendPostMsg(name){
         .then(response => response.text())
         .then(data => {
             let div = document.getElementById("getrespmsg");
-            div.innerHTML = "";
+            div.innerHTML = "Últimos 10 logs: <br/>";
             console.log(data);
-            div.innerHTML = data;
+            displayJson(data, div);
     });
 }
 
