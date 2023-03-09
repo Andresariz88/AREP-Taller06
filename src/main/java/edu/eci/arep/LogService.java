@@ -44,7 +44,7 @@ public class LogService {
         MongoCollection<Document> collection = db.getCollection("Logs");
 
         List<Document> documents = new ArrayList<>();
-        try (MongoCursor<Document> cursor = collection.find().sort(Sorts.descending("createdAt")).iterator()) {
+        try (MongoCursor<Document> cursor = collection.find().limit(10).sort(Sorts.descending("createdAt")).iterator()) {
             while (cursor.hasNext()) {
                 documents.add(cursor.next());
             }
