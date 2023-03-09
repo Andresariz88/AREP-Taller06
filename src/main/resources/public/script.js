@@ -1,14 +1,6 @@
 function displayJson(json, div) {
-    for (const key of Object.keys(json)) {
-        if (key == "Ratings") {
-            div.innerHTML += "Ratings: "
-            for (const ratingKey of Object.keys(json[key])) {
-                div.innerHTML += json[key][ratingKey]["Source"] + ": " + json[key][ratingKey]["Value"] + ", ";
-            }
-            div.innerHTML += "<br/>"
-        } else {
-            div.innerHTML += key + ": " + json[key] + "<br/>";
-        }
+    for (const key of Object.keys(Object.keys(json))) {
+        div.innerHTML += key + ": " + JSON.stringify(json[key].value) + " - " + JSON.stringify(json[key].createdAt) + "<br/>";
     }
 }
 
@@ -29,18 +21,18 @@ function sendPostMsg(name){
             div.innerHTML = "";
             console.log(data);
             div.innerHTML = data;
-    } /*document.getElementById("postrespmsg").innerHTML = data*/);
+    });
 }
 
 function sendGetMsg() {
     let url = "/logs";
         fetch (url, {method: 'GET'})
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
                 let div = document.getElementById("getrespmsg");
-                div.innerHTML = "";
+                div.innerHTML = "Últimos 10 logs: <br/>";
                 console.log(data);
-                div.innerHTML = data;
+                displayJson(data, div);
         });
 }
 
