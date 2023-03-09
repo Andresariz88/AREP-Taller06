@@ -124,7 +124,11 @@ Para virtualizar y desplegar el proyecto en AWS se hizo de la siguiente manera:
 
     Y así para cada imagen. (La imagen logservice se corre 3 veces, cada una con puerto diferente)
 
-3. Y listo, ya tenemos la aplicación corriendo completamente en la nube y con contenedores.
+3. Se requiere modificar el grupo de seguridad agregando una regla de entrada para permitir conexiones mediante el puerto 4567.
+
+    ![](./img/img10.png)
+
+4. Y listo, ya tenemos la aplicación corriendo completamente en la nube y con contenedores.
 
     ![](./img/img9.png)
 
