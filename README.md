@@ -107,7 +107,7 @@ Para virtualizar y probar localmente el proyecto se hizo de la siguiente manera:
 
     ![](./img/img4.png)
     
-    Para se quiere registrar un nuevo log escribirlo en el input y pulsar "Buscar". Si solo se quiere consultar, pulsar "Buscar" con el campo vacío.
+    Si se quiere registrar un nuevo log, escribirlo en el input y pulsar "Buscar". Si solo se quiere consultar, pulsar "Buscar" con el campo vacío.
 
 ## **Virtualización AWS**
 Para virtualizar y desplegar el proyecto en AWS se hizo de la siguiente manera:
