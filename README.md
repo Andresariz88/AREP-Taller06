@@ -122,7 +122,7 @@ Para virtualizar y desplegar el proyecto en AWS se hizo de la siguiente manera:
 
     ![](./img/img8.png)
 
-    Y así para cada imagen.
+    Y así para cada imagen. (La imagen logservice se corre 3 veces, cada una con puerto diferente)
 
 3. Y listo, ya tenemos la aplicación corriendo completamente en la nube y con contenedores.
 
