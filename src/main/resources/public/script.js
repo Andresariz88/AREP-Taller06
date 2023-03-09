@@ -15,7 +15,7 @@ function sendPostMsg(name){
             value: name.value
         })
     })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
             let div = document.getElementById("getrespmsg");
             div.innerHTML = "Últimos 10 logs: <br/>";
