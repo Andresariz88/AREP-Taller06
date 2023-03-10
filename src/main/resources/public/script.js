@@ -1,6 +1,6 @@
 function displayJson(json, div) {
     for (const key of Object.keys(Object.keys(json))) {
-        div.innerHTML += key + ": " + JSON.stringify(json[key].createdAt).replace('"', "").replace('"', "") + " - " + JSON.stringify(json[key].value) + "<br/>";
+        div.innerHTML += key + ": " + JSON.stringify(json[key].createdAt) + " - " + JSON.stringify(json[key].value) + "<br/>";
     }
 }
 

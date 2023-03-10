@@ -39,7 +39,7 @@ public class LogService {
     }
 
     public static List<Document> getLogs() {
-        mongo = new MongoClient("172.31.54.93", 27017);
+        mongo = new MongoClient("ec2-52-204-202-228.compute-1.amazonaws.com", 27017);
         MongoDatabase db = mongo.getDatabase("admin");
         MongoCollection<Document> collection = db.getCollection("Logs");
 
@@ -56,7 +56,7 @@ public class LogService {
     }
 
     public static void insertLog(String body) {
-        mongo = new MongoClient( "172.31.54.93" , 27017);
+        mongo = new MongoClient( "ec2-52-204-202-228.compute-1.amazonaws.com" , 27017);
         MongoDatabase db = mongo.getDatabase("admin");
 
         MongoCollection<Document> collection = db.getCollection("Logs");
@@ -73,6 +73,6 @@ public class LogService {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 35001;
+        return 35003;
     }
 }

@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import static spark.Spark.*;
@@ -74,7 +76,12 @@ public class WebServer {
 
     private static String roundRobin() {
         Random random = new Random();
-        String newUrl = String.format(WebServer.GET_URL, (random.nextInt(3)+1));
+        Map<Integer, String> logservers = new HashMap<>();
+        logservers.put(0, "http://ec2-54-225-8-186.compute-1.amazonaws.com");
+        logservers.put(1, "http://ec2-44-198-181-103.compute-1.amazonaws.com");
+        logservers.put(2, "http://ec2-44-204-96-113.compute-1.amazonaws.com");
+        int a = random.nextInt(3);
+        String newUrl = logservers.get(a) + ":3500" + (a+1);
         System.out.println("Making request to: "+newUrl);
         return newUrl;
     }
