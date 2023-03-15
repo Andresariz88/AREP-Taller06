@@ -74,7 +74,7 @@ Se instanció la máquina y con ayuda de ```SFTP``` se envió la carpeta target 
 
 Con ayuda de ```java -cp``` se ejecutó el programa y se probó que funcionara la conexión con los servidores LogService.
 
-
+![](./img/img7.png)
 
 ## Built With
 
